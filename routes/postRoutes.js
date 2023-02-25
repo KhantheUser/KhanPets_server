@@ -1,16 +1,14 @@
-const express = require('express');
-const {createPost, getAllPost} = require('../controllers/postController')
+const express = require("express");
 
+const {
+  createPost,
+  getAllPost,
+  deleteMyPost,
+} = require("../controllers/postController");
 
-const routes = express.Router()
+const routes = express.Router();
 
+routes.route("/").post(createPost).get(getAllPost);
+routes.route("/:id").delete(deleteMyPost);
 
-routes.route('/')
-.post(createPost)
-.get(getAllPost)
-
-
-
-
-
-module.exports = routes
+module.exports = routes;
