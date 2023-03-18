@@ -72,7 +72,7 @@ routes.route("/").post(async (req, res) => {
     },
     line_items: products,
     mode: "payment",
-    success_url: `khan-pets-client.vercel.app/checkout/success`,
+    success_url: `https://khan-pets-client.vercel.app/checkout/success`,
     cancel_url: `https://www.invert.vn/media/uploads/uploads/2022/12/03191304-8-anh-gai-xinh-toc-dai.jpeg`,
   });
 
