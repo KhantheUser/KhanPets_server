@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(function (req, res, next) {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://khan-pets-server.vercel.app"
+    "https://khan-pets-client.vercel.app"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
