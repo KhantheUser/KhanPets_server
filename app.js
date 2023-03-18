@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://khan-pets-client.vercel.app",
+    origin: "https://khan-pets-server.vercel.app",
   })
 );
 app.set("view engine", "html");
