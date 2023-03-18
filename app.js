@@ -13,6 +13,7 @@ const postRoutes = require("./routes/postRoutes");
 const conversationRoutes = require("./routes/conversationRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const likeRoutes = require("./routes/likeRoutes");
+const checkoutRoutes = require("./routes/checkoutRoute");
 const globalErrorHandler = require("./controllers/errorsController.js");
 const AppError = require("./utils/appError");
 
@@ -36,6 +37,7 @@ app.use("/api/post", postRoutes);
 app.use("/api/conversation", conversationRoutes);
 app.use("/api/like", likeRoutes);
 app.use("/api/message", messageRoutes);
+app.use("/api/checkout", checkoutRoutes);
 
 app.all("*", (req, res, next) => {
   next(new AppError(`Can not find ${req.originalUrl}`, 404));
